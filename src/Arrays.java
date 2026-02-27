@@ -20,6 +20,7 @@ public class Arrays {
         aveArray();
         maxArray();
         minArray();
+        maxIndex();
 
 
     }
@@ -29,14 +30,14 @@ public class Arrays {
         }
     }
     public void sumArray(){
-        int a=0;
+        double a=0;
         for(int z=0;z< nums.length;z=z+1){
             a=a+nums[z];
         }
         System.out.println(a);
     }
     public void aveArray(){
-        int b=0;
+        double b=0;
         for(int z=0;z< nums.length;z=z+1){
             b=b+nums[z];
         }
@@ -56,6 +57,18 @@ public class Arrays {
             c=Math.min(c,nums[z]);
         }
         System.out.println(c);
+    }
+    public void maxIndex(){
+        int c=0;
+        int index=0;
+        for(int z=0;z< nums.length;z=z+1){
+            if (nums[z]>c){
+                c=nums[z];
+                index=z;
+            }
+
+        }
+        System.out.println(index);
     }
 }
 
