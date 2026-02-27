@@ -17,6 +17,9 @@ public class Arrays {
         }
         displayArray();
         sumArray();
+        aveArray();
+        maxArray();
+        minArray();
 
 
     }
@@ -31,6 +34,28 @@ public class Arrays {
             a=a+nums[z];
         }
         System.out.println(a);
+    }
+    public void aveArray(){
+        int b=0;
+        for(int z=0;z< nums.length;z=z+1){
+            b=b+nums[z];
+        }
+        b=b/nums.length;
+        System.out.println(b);
+    }
+    public void maxArray(){
+        int c=0;
+        for(int z=0;z< nums.length;z=z+1){
+            c=Math.max(c,nums[z]);
+        }
+        System.out.println(c);
+    }
+    public void minArray(){
+        int c=100;
+        for(int z=0;z< nums.length;z=z+1){
+            c=Math.min(c,nums[z]);
+        }
+        System.out.println(c);
     }
 }
 
