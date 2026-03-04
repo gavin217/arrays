@@ -1,6 +1,7 @@
 public class Arrays {
 
     public int[] nums;
+    public star[] stars;
 
     public static void main(String[] args) {
         System.out.println("welcome to the world of arrays");
@@ -12,6 +13,23 @@ public class Arrays {
 
     public Arrays(){
         nums=new int[10];
+        stars=new star[7];
+        stars[0]=new star();
+        for (int x=0;x<stars.length;x=x+1){
+            stars[x]=new star();
+            stars[x].points=(int)(Math.random()*11);
+        }
+        star s1=new star();
+        s1.printInfo();
+        stars[0].printInfo();
+        s1.color="red";
+        s1.points=7;
+        s1.printInfo();
+        stars[0].color="blue";
+        stars[0].points=11;
+        stars[0].printInfo();
+        System.out.println(stars[2].points);
+
         for(int y=0;y<nums.length;y=y+1){
             nums[y]=(int)(Math.random()*100)+1;
         }
@@ -22,6 +40,7 @@ public class Arrays {
         minArray();
         maxIndex();
         greaterThan50();
+        displayStars();
 
 
     }
@@ -80,6 +99,11 @@ public class Arrays {
 
         }
         System.out.println(index);
+    }
+    public void displayStars(){
+        for (int z=0;z< stars.length;z=z+1){
+            stars[z].printInfo();
+        }
     }
 }
 
