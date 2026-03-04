@@ -17,7 +17,7 @@ public class Arrays {
         stars[0]=new star();
         for (int x=0;x<stars.length;x=x+1){
             stars[x]=new star();
-            stars[x].points=(int)(Math.random()*11);
+            stars[x].points=(int)(Math.random()*10);
         }
         star s1=new star();
         s1.printInfo();
@@ -41,6 +41,7 @@ public class Arrays {
         maxIndex();
         greaterThan50();
         displayStars();
+        addStars();
 
 
     }
@@ -104,6 +105,13 @@ public class Arrays {
         for (int z=0;z< stars.length;z=z+1){
             stars[z].printInfo();
         }
+    }
+    public void addStars(){
+        double a=0;
+        for(int z=0;z< stars.length;z=z+1){
+            a=a+stars[z].points;
+        }
+        System.out.println(a);
     }
 }
 
