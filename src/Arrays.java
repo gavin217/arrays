@@ -21,6 +21,7 @@ public class Arrays {
         maxArray();
         minArray();
         maxIndex();
+        greaterThan50();
 
 
     }
@@ -65,6 +66,16 @@ public class Arrays {
             if (nums[z]>c){
                 c=nums[z];
                 index=z;
+            }
+
+        }
+        System.out.println(index);
+    }
+    public void greaterThan50(){
+        int index=0;
+        for(int z=0;z< nums.length;z=z+1){
+            if (nums[z]>50){
+                index=index+1;
             }
 
         }
